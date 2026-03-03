@@ -44,6 +44,20 @@ python scanner.py ~/.openclaw/workspace/skills --all --verbose
 ```bash
 python scanner.py ~/.npm-global/lib/node_modules/openclaw/skills --all --verbose
 ```
+## Example Output
+
+```
+ClawScan scanning tests/malicious_samples...
+
+╭──────────────────────┬──────────┬───────┬──────────┬──────────────╮
+│ Skill                │  Risk    │ Score │ Findings │ Top Severity │
+├──────────────────────┼──────────┼───────┼──────────┼──────────────┤
+│ fake-calendar-sync   │ CRITICAL │   61  │    7     │  CRITICAL    │
+│ fake-news-digest     │ CRITICAL │   55  │    6     │  CRITICAL    │
+╰──────────────────────┴──────────┴───────┴──────────┴──────────────╯
+
+  Scanned: 2  Clean: 0  Flagged: 2  Critical: 2
+```
 
 ## Project Structure
 ```
