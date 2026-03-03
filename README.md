@@ -33,6 +33,12 @@ python scanner.py tests/malicious_samples --all --verbose --only-flagged
 
 # Export results as JSON
 python scanner.py tests/malicious_samples --all --json report.json
+
+# Scan skills you've downloaded from ClawHub
+python scanner.py ~/.openclaw/workspace/skills --all --verbose
+
+# Scan OpenClaw's built-in bundled skills
+python scanner.py ~/.npm-global/lib/node_modules/openclaw/skills --all --verbose
 ```
 
 ---
