@@ -10,7 +10,6 @@ import re
 from .base import BaseDetector, Finding, Severity
 from core.parser import Skill
 
-# Well-known exfil/C2 infrastructure patterns
 SUSPICIOUS_DOMAINS = [
     r"(?i)(ngrok\.io)",
     r"(?i)(requestbin\.com|webhook\.site|pipedream\.net)",

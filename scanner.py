@@ -69,7 +69,6 @@ def main(target: Path, scan_all: bool, json_out: Path | None, verbose: bool, onl
     if json_out:
         export_json(summary, json_out)
 
-    # Exit code: 0 = clean, 1 = findings present, 2 = critical findings
     if summary.critical_count > 0:
         sys.exit(2)
     elif summary.flagged > 0:

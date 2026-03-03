@@ -6,10 +6,8 @@ Maps to OWASP ASI06 — Excessive Permissions / Privilege Escalation.
 from .base import BaseDetector, Finding, Severity
 from core.parser import Skill
 
-# Permissions that are high-risk on their own
 HIGH_RISK_PERMISSIONS = {"shell", "filesystem", "browser"}
 
-# Combinations that together are especially dangerous
 DANGEROUS_COMBOS = [
     ({"network", "shell"}, "Network + Shell: can download and execute arbitrary code"),
     ({"network", "filesystem"}, "Network + Filesystem: can exfiltrate local files"),
@@ -28,7 +26,6 @@ class PermissionsDetector(BaseDetector):
         if not perms:
             return findings
 
-        # Flag individual high-risk permissions
         for perm in perms & HIGH_RISK_PERMISSIONS:
             findings.append(Finding(
                 detector=self.name,
@@ -40,7 +37,6 @@ class PermissionsDetector(BaseDetector):
                 mitre_atlas="AML.T0046 — Exfiltration Over Alternative Protocol",
             ))
 
-        # Flag dangerous combinations
         for combo, reason in DANGEROUS_COMBOS:
             if combo.issubset(perms):
                 findings.append(Finding(
@@ -53,7 +49,6 @@ class PermissionsDetector(BaseDetector):
                     mitre_atlas="AML.T0046",
                 ))
 
-        # Wildcard / all permissions
         if "*" in perms or "all" in perms:
             findings.append(Finding(
                 detector=self.name,

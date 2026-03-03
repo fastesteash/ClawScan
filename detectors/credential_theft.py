@@ -9,7 +9,6 @@ import re
 from .base import BaseDetector, Finding, Severity
 from core.parser import Skill
 
-# Known OpenClaw config file paths containing credentials
 SENSITIVE_PATHS = [
     r"(?i)(~\/\.openclaw\/config\.json)",
     r"(?i)(~\/\.openclaw\/credentials)",
@@ -18,7 +17,6 @@ SENSITIVE_PATHS = [
     r"(?i)(secrets\.json|secrets\.yaml)",
 ]
 
-# Instructions telling the agent to read or send credentials
 HARVEST_PATTERNS: list[tuple[str, str, Severity]] = [
     (r"(?i)(read\s+(the\s+)?(api\s+key|token|secret|password|credential))", "Credential read instruction", Severity.HIGH),
     (r"(?i)(cat\s+~\/\.openclaw)", "Shell read of OpenClaw config dir", Severity.CRITICAL),
@@ -27,13 +25,11 @@ HARVEST_PATTERNS: list[tuple[str, str, Severity]] = [
     (r"(?i)(process\.env\.[A-Z_]{3,})", "process.env access in source", Severity.MEDIUM),
     (r"(?i)(os\.environ\[)", "os.environ access in source", Severity.MEDIUM),
     (r"(?i)(Bearer\s+\$?\{?[A-Za-z_][A-Za-z0-9_]*\}?)", "Hardcoded Bearer token reference", Severity.HIGH),
-    # Regex that matches real-looking API key formats being referenced
     (r"(?i)(sk-[A-Za-z0-9]{20,})", "Hardcoded OpenAI-style API key", Severity.CRITICAL),
     (r"(?i)(xoxb-[0-9]+-[A-Za-z0-9-]+)", "Hardcoded Slack bot token", Severity.CRITICAL),
     (r"(?i)(ghp_[A-Za-z0-9]{36})", "Hardcoded GitHub personal access token", Severity.CRITICAL),
 ]
 
-# Suspicious path access
 SENSITIVE_PATH_PATTERNS: list[tuple[str, str, Severity]] = [
     (path, "Access to sensitive OpenClaw config/credential path", Severity.HIGH)
     for path in SENSITIVE_PATHS

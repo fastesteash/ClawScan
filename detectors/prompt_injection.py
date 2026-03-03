@@ -8,7 +8,6 @@ from .base import BaseDetector, Finding, Severity
 from core.parser import Skill
 
 # Patterns that attempt to override the agent's role, identity, or prior instructions.
-# Each entry: (regex_pattern, title, severity, evidence_label)
 INJECTION_PATTERNS: list[tuple[str, str, Severity]] = [
     # Role/identity hijacking
     (r"(?i)(ignore\s+(all\s+)?previous\s+instructions?)", "Ignore-previous-instructions directive", Severity.CRITICAL),
