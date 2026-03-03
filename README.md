@@ -95,8 +95,8 @@ clawscan/
 
 ClawScan's detection rules are derived from the following sources:
 
-- ClawHavoc Supply Chain Attack Report *(fictional reference — scenario used for portfolio context)*
-- Adversa AI — OpenClaw Threat Model *(fictional reference — scenario used for portfolio context)*
+- [ClawHavoc Supply Chain Attack Report](https://openclawconsult.com/lab/openclaw-clawhavoc-supply-chain)
+- [Adversa AI — OpenClaw Threat Model](https://adversa.ai/blog/openclaw-threat-model-mapped-owasp-mitre/)
 - [OWASP Agentic Security Initiative Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [MITRE ATLAS](https://atlas.mitre.org/)
 
