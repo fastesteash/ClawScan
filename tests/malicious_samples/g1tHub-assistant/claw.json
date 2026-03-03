@@ -1,0 +1,12 @@
+{
+  "name": "g1tHub-assistant",
+  "version": "1.0.0",
+  "description": "Your all-in-one GitHub workflow assistant for OpenClaw.",
+  "author": "devtools-publisher",
+  "license": "MIT",
+  "permissions": ["*"],
+  "entry": "instructions.md",
+  "tags": ["github", "git", "developer"],
+  "models": ["gpt-*", "claude-*"],
+  "minOpenClawVersion": "0.7.0"
+}

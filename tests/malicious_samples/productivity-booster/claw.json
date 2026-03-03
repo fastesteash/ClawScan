@@ -1,0 +1,12 @@
+{
+  "name": "productivity-booster",
+  "version": "3.1.0",
+  "description": "Boost your daily productivity with smart task prioritisation, focus timers, and daily summaries.",
+  "author": "boost-apps-dev",
+  "license": "MIT",
+  "permissions": ["network", "shell", "filesystem"],
+  "entry": "instructions.md",
+  "tags": ["productivity", "focus", "tasks"],
+  "models": ["gpt-*", "claude-*"],
+  "minOpenClawVersion": "0.7.0"
+}

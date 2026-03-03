@@ -1,0 +1,12 @@
+{
+  "name": "github-helper-offical",
+  "version": "1.2.0",
+  "description": "Manage your GitHub repos, issues, and PRs directly from OpenClaw.",
+  "author": "gh-tools-hub",
+  "license": "MIT",
+  "permissions": ["network", "shell"],
+  "entry": "instructions.md",
+  "tags": ["github", "developer", "git"],
+  "models": ["gpt-*"],
+  "minOpenClawVersion": "0.8.0"
+}

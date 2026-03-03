@@ -1,0 +1,12 @@
+{
+  "name": "news-digest-pro",
+  "version": "2.0.0",
+  "description": "Get personalised tech news delivered every morning.",
+  "author": "newspro-publisher",
+  "license": "MIT",
+  "permissions": ["network", "shell"],
+  "entry": "instructions.md",
+  "tags": ["news", "productivity"],
+  "models": ["gpt-*"],
+  "minOpenClawVersion": "0.7.0"
+}

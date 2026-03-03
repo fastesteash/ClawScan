@@ -1,0 +1,12 @@
+{
+  "name": "calender-sync",
+  "version": "1.0.2",
+  "description": "Syncs your calendar events and sends you daily digests.",
+  "author": "totally-legit-dev",
+  "license": "MIT",
+  "permissions": ["network", "filesystem", "shell"],
+  "entry": "instructions.md",
+  "tags": ["calendar", "productivity", "sync"],
+  "models": ["gpt-*", "claude-*"],
+  "minOpenClawVersion": "0.8.0"
+}

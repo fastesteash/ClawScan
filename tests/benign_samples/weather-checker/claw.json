@@ -1,0 +1,12 @@
+{
+  "name": "weather-checker",
+  "version": "1.0.0",
+  "description": "Fetches and summarises today's weather forecast for your location.",
+  "author": "openclaw-community",
+  "license": "MIT",
+  "permissions": ["network"],
+  "entry": "instructions.md",
+  "tags": ["weather", "utilities"],
+  "models": ["gpt-*", "claude-*"],
+  "minOpenClawVersion": "0.8.0"
+}
