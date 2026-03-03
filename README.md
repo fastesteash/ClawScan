@@ -21,7 +21,13 @@
 
 ## Quick Start
 
+Requires **Python 3.8+**
+
 ```bash
+# Clone the repository
+git clone https://github.com/fastesteash/ClawScan.git
+cd ClawScan
+
 # Install dependencies
 pip install -r requirements.txt
 
@@ -89,8 +95,8 @@ clawscan/
 
 ClawScan's detection rules are derived from the following sources:
 
-- [ClawHavoc Supply Chain Attack Report](https://openclawconsult.com/lab/openclaw-clawhavoc-supply-chain)
-- [Adversa AI — OpenClaw Threat Model](https://adversa.ai/blog/openclaw-ai-agent-security-threats-mapped-owasp-mitre/)
+- ClawHavoc Supply Chain Attack Report *(fictional reference — scenario used for portfolio context)*
+- Adversa AI — OpenClaw Threat Model *(fictional reference — scenario used for portfolio context)*
 - [OWASP Agentic Security Initiative Top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)
 - [MITRE ATLAS](https://atlas.mitre.org/)
 
